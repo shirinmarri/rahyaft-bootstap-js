@@ -1,0 +1,709 @@
+@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+
+@font-face {
+    font-family: Samim;
+    src: url('/fonts/Samim.eot');
+    src: url('/fonts/Samim.eot?#iefix') format('embedded-opentype'), url('/fonts/Samim.woff2') format('woff2'), url('/fonts/Samim.woff') format('woff'), url('/fonts/Samim.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Samim-Bold;
+    src: url('/fonts/Samim-Bold.eot');
+    src: url('/fonts/Samim-Bold.eot?#iefix') format('embedded-opentype'), url('/fonts/Samim-Bold.woff2') format('woff2'), url('/fonts/Samim-Bold.woff') format('woff'), url('/fonts/Samim-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Samim-Medium;
+    src: url('/fonts/Samim-Medium.eot');
+    src: url('/fonts/Samim-Medium.eot?#iefix') format('embedded-opentype'), url('/fonts/Samim-Medium.woff2') format('woff2'), url('/fonts/Samim-Medium.woff') format('woff'), url('/fonts/Samim-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: Samim-number;
+    src: url('/fonts/Samim-FD.eot');
+    src: url('/fonts/Samim-FD.eot?#iefix') format('embedded-opentype'), url('/fonts/Samim-FD.woff2') format('woff2'), url('/fonts/Samim-FD.woff') format('woff'), url('/fonts/Samim-FD.ttf') format('truetype');
+}
+
+
+html, body {
+    font-family: Samim-number,Samim, Arial, sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+
+.font-samin {
+    font-family: Samim;
+}
+
+.nav {
+    padding-right: 0;
+}
+
+a, .btn-link {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+app {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-row {
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.main {
+    background-color: #e9ecef;
+    flex: 1;
+}
+
+    .main .top-row {
+        background-color: #f7f7f7;
+        border-bottom: 1px solid #d6d5d5;
+        /*justify-content: flex-end;*/
+    }
+
+        .main .top-row > a, .main .top-row .btn-link {
+            white-space: nowrap;
+            margin-left: 1.5rem;
+        }
+
+        .main .top-row a:first-child {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+.sidebar {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+    .sidebar .nav-link {
+        color: white;
+        padding: 1rem;
+    }
+
+        .sidebar .nav-link:hover {
+            background-color: rgba(156, 152, 252, 0.30);
+            color: white;
+        }
+
+    .sidebar a.nav-link.active {
+        background-color: rgba(156, 152, 252, 0.30);
+        border-right: 2px solid rgb(0, 224, 255);
+        color: white;
+    }
+
+    .sidebar .top-row {
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    .sidebar .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .sidebar .oi {
+        width: 2rem;
+        font-size: 1.1rem;
+        vertical-align: text-top;
+        top: -2px;
+    }
+
+    .sidebar .nav-item {
+        font-size: 0.9rem;
+        padding-bottom: 0.5rem;
+    }
+
+        .sidebar .nav-item:first-of-type {
+            padding-top: 1rem;
+        }
+
+        .sidebar .nav-item:last-of-type {
+            padding-bottom: 1rem;
+        }
+
+        .sidebar .nav-item a {
+            color: #d7d7d7;
+            border-radius: 4px;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            line-height: 3rem;
+        }
+
+            .sidebar .nav-item a.active {
+                background-color: rgba(156, 152, 252, 0.30);
+                border-right: 2px solid rgb(0, 224, 255);
+                color: white;
+            }
+
+            .sidebar .nav-item a:hover {
+                background-color: rgba(156, 152, 252, 0.30);
+                color: white;
+            }
+
+.content {
+    padding-top: 1.1rem;
+}
+
+.navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+@media (max-width: 767.98px) {
+    .main .top-row:not(.auth) {
+        display: none;
+    }
+
+    .main .top-row.auth {
+        justify-content: space-between;
+    }
+
+    .main .top-row a, .main .top-row .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    app {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        max-width: 75px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+        .sidebar .nav-link {
+            color: white;
+            padding:1rem;
+        }
+
+            .sidebar .nav-link:hover {
+                background-color: rgba(156, 152, 252, 0.30);
+                color: white;
+            }
+
+        .sidebar a.nav-link.active {
+            background-color: rgba(156, 152, 252, 0.30);
+            border-right: 2px solid rgb(0, 224, 255);
+            color: white;
+        }
+
+
+    .main .top-row {
+        position: sticky;
+        top: 0;
+    }
+
+    .main > div {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .sidebar .collapse {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+}
+
+.image-overlay {
+    background-color: rgba(0, 0, 0, 0.6); 
+    pointer-events: none;
+}
+
+/*---------------------- Message Box ----------------------*/
+
+.BackAMessageBox {
+    z-index: 1050;
+    background: black;
+    filter: blur(2px);
+    opacity: .6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(10px);
+    display: none;
+}
+
+.AMessageBox {
+    z-index: 1051;
+    background: ghostwhite;
+    position: fixed;
+    filter: none;
+    top: 40%;
+    /*bottom: 40%;*/
+    left: 30%;
+    right: 35%;
+    max-width: 550px;
+    padding: 0 0 0.5% 0;
+    display: none;
+}
+
+    .AMessageBox .AMessageBoxTitle {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .AMessageBox .AMessageBoxContent {
+        margin-right: 5%;
+        margin-left: 5%;
+        text-align: right;
+    }
+
+        .AMessageBox .AMessageBoxContent .icon {
+            float: right;
+            margin: 2px 0 0 2px;
+        }
+
+        .AMessageBox .AMessageBoxContent .AMessageBoxInfo {
+            font-size: large;
+            font-weight: bold;
+        }
+
+        .AMessageBox .AMessageBoxContent .AMessageBoxHint {
+            margin-right: 5%;
+            margin-left: 5%;
+            overflow-y: auto;
+            min-height: 60px;
+            max-height: 60px;
+        }
+
+    .AMessageBox > button {
+        position: relative;
+        bottom: 10%;
+        right: 40%;
+        width: 20%;
+        left: 40%;
+    }
+
+
+/* Confirm box*/
+#confirmBox {
+    z-index: 2020;
+    background: ghostwhite;
+    position: fixed;
+    filter: none;
+    top: 40%;
+    /*bottom: 40%;*/
+    left: 30%;
+    right: 35%;
+    max-width: 550px;
+    padding: 0 0 0.5% 0;
+}
+
+
+/*AddButton*/
+.positionButton {
+    position: fixed;
+    bottom: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: darkorange;
+    box-shadow: 2px 4px 5px 1px rgba(19, 15, 13, 0.62);
+}
+
+.positionButtonleft {
+    left: 1%;
+}
+
+.positionButtonright {
+    right: 300px;
+}
+
+.checkboxLabel {
+    display: block;
+    padding-right: 15px;
+    text-indent: +15px;
+}
+
+    .checkboxLabel input {
+        width: 13px;
+        height: 13px;
+        padding: 0;
+        margin: 0;
+        vertical-align: bottom;
+        position: relative;
+        top: -1px;
+        overflow: hidden;
+    }
+
+
+/*-----------checkBox------------*/
+
+.checkboxcontainer {
+    display: inline;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 12px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    .checkboxcontainer input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: white;
+    border: 1px solid #2196F3;
+    border-radius: 6px;
+}
+
+.checkboxcontainer:hover input ~ .checkmark {
+    background-color: rgba(78, 168, 240, 0.40);
+}
+
+.checkboxcontainer input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkboxcontainer input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkboxcontainer .checkmark:after {
+    left: 5.5px;
+    top: 1px;
+    width: 6px;
+    height: 10px;
+    border: solid #dee2e6;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* chatroom */
+
+.send {
+    background-color: darkslateblue;
+    color: white;
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    margin-top: 5px;
+    padding: 10px;
+    width: 60%;
+    direction: rtl;
+}
+
+.received {
+    background-color: #f0f1f5;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    margin-top: 5px;
+    padding: 10px;
+    width: 60%;
+    direction: rtl;
+}
+
+.myActive {
+    background-color: transparent;
+}
+
+    .myActive:hover {
+        background-color: rgba(5, 76, 152, 0.73);
+    }
+
+    .myActive:active {
+        background-color: rgba(5, 76, 152, 0.73);
+    }
+
+    .myActive:focus {
+        background-color: rgba(5, 76, 152, 0.73);
+    }
+
+.scrollable {
+    overflow-y: scroll;
+    min-height: 300px;
+}
+    /* width */
+    .scrollable::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    /* Track */
+    .scrollable::-webkit-scrollbar-track {
+        background: #2b5278 #f1f1f1;
+    }
+
+    /* Handle */
+    .scrollable::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+        /* Handle on hover */
+        .scrollable::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+.noBoxShadow {
+}
+
+    .noBoxShadow:focus {
+        box-shadow: none;
+    }
+
+
+
+/* -------------------------------rToast-------------------------------- */
+
+.rToast {
+    display: none;
+    padding: 1.5rem;
+    color: #fff;
+    z-index: 1;
+    position: absolute;
+    width: 25rem;
+    top: 2rem;
+    border-radius: 1rem;
+    left: 50%;
+}
+
+.rToast-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+    font-size: 2.5rem;
+}
+
+.rToast-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-left: 1rem;
+}
+
+    .rToast-body p {
+        margin-bottom: 0;
+    }
+
+.rToast-visible {
+    display: flex;
+    flex-direction: row;
+    animation: fadein 1.5s forwards;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+/* ------------------------------ Timeline ----------------------------------------*/
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    direction:ltr;
+}
+
+    /* The actual timeline (the vertical ruler) */
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 3px;
+        background-color: #673ab769;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+    }
+
+/* Container around content */
+.timeline_container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+    /* The circles on the timeline */
+    .timeline_container::after {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        border: 1px solid #5572ff;
+        top: 25px;
+        border-radius: 50%;
+        z-index: 1;
+    }
+/* Place the container to the left */
+.timeline_left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.timeline_right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.timeline_left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.timeline_right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.timeline_right::after {
+    left: -9px;
+    background-color: #2c7be5;
+    border: 1px solid #2c7be5;
+}
+.timeline_left::after {
+    right: -6px;
+    background-color: #1abc9c;
+    border: 1px solid #1abc9c;
+}
+
+/* The actual content */
+.timeline_content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .timeline_container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+        /* Make sure that all arrows are pointing leftwards */
+        .timeline_container::before {
+            left: 60px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+    /* Make sure all circles are at the same spot */
+    .timeline_left::after, .timeline_right::after {
+        left: 22px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .timeline_right {
+        left: 0%;
+    }
+}
+
+
+.pointer{
+    cursor:pointer;
+}

@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'iransans';
+    src: url('/fonts/iransans.TTF') format('truetype');
+}
+
+html {
+    font-family: IRANSans;
+}
+
+body {
+    font-family: IRANSans;
+}
+
+a {
+    font-family: iransans;
+}
+
+.nav-link {
+    font-family: iransans;
+}
+
+#mainNav .navbar-brand {
+    font-family: iransans;
+}
+
+.pointer {
+    cursor: pointer;
+}
