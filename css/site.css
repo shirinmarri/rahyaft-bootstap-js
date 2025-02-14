@@ -511,8 +511,7 @@ app {
             background: #555;
         }
 
-.noBoxShadow {
-}
+
 
     .noBoxShadow:focus {
         box-shadow: none;
